@@ -1,0 +1,511 @@
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
+  \*********************************************************************************************************/
+@charset "UTF-8";
+/*スクロールダウン全体の場所*/
+.scrolldown1 {
+  opacity: 0;
+  /*描画位置※位置は適宜調整してください*/
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  bottom: 50%;
+  /*全体の高さ*/
+  height: 50px; }
+
+/*Scrollテキストの描写*/
+.scrolldown1 span {
+  /*描画位置*/
+  position: absolute;
+  left: -40px;
+  top: -30px;
+  /*テキストの形状*/
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: "Alata", sans-serif;
+  letter-spacing: 0.05em;
+  animation: scrltxtanim  1.4s ease-in-out infinite; }
+
+/* 線の描写 */
+.scrolldown1::after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  top: 0;
+  /*線の形状*/
+  width: 5px;
+  height: 30px;
+  background: #000000;
+  /*線の動き1.4秒かけて動く。永遠にループ*/
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity: 0; }
+
+@keyframes scrltxtanim {
+  0% {
+    color: #000000; }
+  50% {
+    color: #ffffff; }
+  100% {
+    color: #000000; } }
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0; }
+  30% {
+    height: 30px;
+    opacity: 1;
+    background-color: #ffffff; }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+    background-color: #000000; } }
+
+.buttonPosition {
+  visibility: hidden;
+  margin-top: 40px; }
+
+.buttonEffeContainer {
+  width: 226.2px;
+  height: 75.4px; }
+  @media screen and (min-width: 576px) {
+    .buttonEffeContainer {
+      width: 300px;
+      height: 100px; } }
+
+.linkButton {
+  color: #333333;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: "Shippori Antique B1", sans-serif;
+  box-sizing: border-box;
+  width: 226.2px;
+  height: 75.4px;
+  display: flex;
+  align-items: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-color: #ffffff; }
+  @media screen and (min-width: 576px) {
+    .linkButton {
+      font-size: 16px; } }
+  @media screen and (min-width: 576px) {
+    .linkButton {
+      width: 300px;
+      height: 100px; } }
+  .linkButton:hover {
+    animation: btn-hover-anim 0.4s ease-out; }
+  .linkButton:hover p::after {
+    animation: btn-arr-hover-anim 0.4s ease-out;
+    top: 44%;
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-top: 4px solid #333333;
+    border-right: 4px solid #333333;
+    transform: rotate(45deg); }
+  .linkButton__bg__note {
+    background-image: url(6e07397c38795515a641.png); }
+  .linkButton__bg__devian {
+    background-image: url(c5940f3482cf5ef0cdbd.png); }
+  .linkButton__bg__sc {
+    background-image: url(b3913f1ca2bfbd3c2a35.png); }
+  .linkButton__text {
+    padding-left: 3%; }
+  .linkButton p {
+    margin-left: 5%; }
+    .linkButton p::after {
+      top: 44%;
+      left: 40%;
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-top: 4px solid #333333;
+      border-right: 4px solid #333333;
+      transform: rotate(45deg); }
+
+@keyframes btn-hover-anim {
+  0% {
+    background-position: 100%; }
+  50% {
+    background-position: 140%; }
+  100% {
+    background-position: 100%; } }
+
+@keyframes btn-arr-hover-anim {
+  0% {
+    left: 40%; }
+  50% {
+    left: 46%; }
+  100% {
+    left: 40%; } }
+
+#backgroundEffect {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 2;
+  background-color: #888888; }
+
+.bgextend {
+  animation-name: bgextendAnimeBase;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  position: relative;
+  overflow: hidden;
+  /*　はみ出た色要素を隠す　*/
+  opacity: 0; }
+
+@keyframes bgextendAnimeBase {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/*中の要素*/
+.bgappear {
+  animation-name: bgextendAnimeSecond;
+  animation-duration: 0.5s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  opacity: 0; }
+
+@keyframes bgextendAnimeSecond {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*左から右*/
+.bgLRextend::before {
+  animation-name: bgLRextendAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000; }
+
+.bgAboutLRextend::before {
+  animation-name: bgLRextendAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #02728dcc; }
+
+.bgMusicLRextend::before {
+  animation-name: bgLRextendAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ca8080c9; }
+
+@keyframes bgLRextendAnime {
+  0% {
+    transform-origin: left;
+    transform: scaleX(0); }
+  50% {
+    transform-origin: left;
+    transform: scaleX(1); }
+  50.001% {
+    transform-origin: right; }
+  100% {
+    transform-origin: right;
+    transform: scaleX(0); } }
+
+.bgappearTrigger,
+.bgLRextendTrigger {
+  opacity: 0; }
+  .bgappearTrigger2,
+  .bgLRextendTrigger2 {
+    opacity: 0; }
+  .bgappearTrigger3,
+  .bgLRextendTrigger3 {
+    opacity: 0; }
+  .bgappearTrigger4,
+  .bgLRextendTrigger4 {
+    opacity: 0; }
+
+.background-video-area {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden; }
+
+.background-video {
+  /*天地中央配置*/
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*縦横幅指定*/
+  width: 177.77777778vh;
+  /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+  height: 56.25vw;
+  /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+  min-height: 100%;
+  min-width: 100%; }
+
+.background-canvas {
+  /*天地中央配置*/
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*縦横幅指定*/
+  width: 100vh;
+  /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+  height: 100vw;
+  /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+  min-height: 100%;
+  min-width: 100%; }
+
+.background-canvas2 {
+  /*天地中央配置*/
+  position: absolute;
+  z-index: -2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*縦横幅指定*/
+  width: 100vh;
+  /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+  height: 100vw;
+  /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+  min-height: 100%;
+  min-width: 100%; }
+
+html {
+  line-height: 1.0; }
+
+body {
+  font-size: 16px; }
+
+a:hover {
+  color: #FFA500; }
+
+section {
+  position: relative; }
+
+.logos {
+  width: 132px;
+  height: 300px;
+  transform-origin: 0 0;
+  transform: scale(0.464);
+  position: absolute;
+  z-index: 3; }
+  @media screen and (min-width: 576px) {
+    .logos {
+      transform: scale(1); } }
+  .logos__mask {
+    transform-origin: 0 0;
+    transform: scale(0.464);
+    position: absolute;
+    background-color: #000000;
+    top: 0px; }
+    @media screen and (min-width: 576px) {
+      .logos__mask {
+        transform: scale(1); } }
+
+.title {
+  font-size: 46.4px;
+  font-family: "Alata", sans-serif;
+  color: #ffffff; }
+  @media screen and (min-width: 576px) {
+    .title {
+      font-size: 80px; } }
+
+.titlebg {
+  display: inline-block;
+  color: #000000;
+  width: 34.8px; }
+  @media screen and (min-width: 576px) {
+    .titlebg {
+      width: 60px; } }
+  .titlebg__about {
+    background-color: #02728dcc; }
+  .titlebg__illust {
+    background-color: #ca8008c9; }
+  .titlebg__music {
+    background-color: #ca8080c9; }
+
+#topTitle {
+  margin-bottom: 50px; }
+
+#illustTitle {
+  margin-bottom: 50px; }
+
+#musicTitle {
+  margin-bottom: 50px; }
+
+.contents {
+  overflow: hidden;
+  margin-left: 69.6px; }
+  @media screen and (min-width: 576px) {
+    .contents {
+      margin-left: 150px; } }
+
+.textContents {
+  display: inline-block;
+  visibility: hidden;
+  max-width: 96%;
+  background-color: #000000;
+  transform-origin: left;
+  margin-bottom: 40px; }
+  .textContents__bg__about {
+    background-color: #02728dcc; }
+  .textContents__bg__illust {
+    background-color: #ca8008c9; }
+  .textContents__bg__music {
+    background-color: #ca8080c9; }
+  .textContents__text {
+    font-family: "Shippori Antique B1", sans-serif;
+    font-size: 19.488px;
+    color: #ffffff;
+    margin: 0;
+    visibility: hidden; }
+    @media screen and (min-width: 576px) {
+      .textContents__text {
+        font-size: 28px; } }
+
+.topContents__container {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box; }
+
+.illustContents__container {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box; }
+
+.musicContents__container {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box; }
+
+.footer {
+  width: 100vw;
+  height: 100px;
+  background-color: #000000;
+  font-size: 10px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.js1 {
+  transform: rotate(-1deg);
+  margin-bottom: 17%; }
+  @media screen and (min-width: 576px) {
+    .js1 {
+      margin-left: 7%;
+      margin-bottom: 6%; } }
+
+.js2 {
+  transform: rotate(0deg);
+  margin-bottom: 18%; }
+  @media screen and (min-width: 576px) {
+    .js2 {
+      margin-left: 8%;
+      margin-bottom: 3%; } }
+
+.js3 {
+  transform: rotate(-3deg);
+  margin-bottom: 22%; }
+  @media screen and (min-width: 576px) {
+    .js3 {
+      margin-left: 2%;
+      margin-bottom: 3%; } }
+
+.js4 {
+  transform: rotate(0deg);
+  margin-bottom: 19%; }
+  @media screen and (min-width: 576px) {
+    .js4 {
+      margin-left: 5%;
+      margin-bottom: 4%; } }
+
+.js5 {
+  transform: rotate(-1deg);
+  margin-bottom: 20%; }
+  @media screen and (min-width: 576px) {
+    .js5 {
+      margin-left: 1%;
+      margin-bottom: 4%; } }
+
+.js6 {
+  transform: rotate(0deg);
+  margin-bottom: 18%; }
+  @media screen and (min-width: 576px) {
+    .js6 {
+      margin-left: 7%;
+      margin-bottom: 4%; } }
+
+.js7 {
+  transform: rotate(-2deg);
+  margin-bottom: 20%; }
+  @media screen and (min-width: 576px) {
+    .js7 {
+      margin-left: 6%;
+      margin-bottom: 3%; } }
+
+.js8 {
+  transform: rotate(0deg);
+  margin-bottom: 19%; }
+  @media screen and (min-width: 576px) {
+    .js8 {
+      margin-left: 5%;
+      margin-bottom: 4%; } }
+
+.js9 {
+  transform: rotate(-3deg);
+  margin-bottom: 12%; }
+  @media screen and (min-width: 576px) {
+    .js9 {
+      margin-left: 7%;
+      margin-bottom: 6%; } }
+
+.js10 {
+  transform: rotate(0deg);
+  margin-bottom: 12%; }
+  @media screen and (min-width: 576px) {
+    .js10 {
+      margin-left: 5%;
+      margin-bottom: 3%; } }
+
+.js11 {
+  transform: rotate(-1deg);
+  margin-bottom: 22%; }
+  @media screen and (min-width: 576px) {
+    .js11 {
+      margin-left: 5%;
+      margin-bottom: 4%; } }
+
+.js12 {
+  transform: rotate(0deg);
+  margin-bottom: 20%; }
+  @media screen and (min-width: 576px) {
+    .js12 {
+      margin-left: 7%;
+      margin-bottom: 3%; } }
+
