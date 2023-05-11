@@ -66,7 +66,10 @@
 
 .buttonPosition {
   visibility: hidden;
-  margin-top: 40px; }
+  margin-top: 40px;
+  margin-bottom: 500px; }
+  .buttonPosition__end {
+    margin-bottom: 0px; }
 
 .buttonEffeContainer {
   width: 226.2px;
@@ -98,9 +101,9 @@
       width: 300px;
       height: 100px; } }
   .linkButton:hover {
-    animation: btn-hover-anim 0.4s ease-out; }
+    animation: btn-hover-anim 0.8s ease-in-out; }
   .linkButton:hover p::after {
-    animation: btn-arr-hover-anim 0.4s ease-out;
+    animation: btn-arr-hover-anim 0.8s ease-in-out;
     top: 44%;
     content: '';
     position: absolute;
@@ -134,7 +137,7 @@
   0% {
     background-position: 100%; }
   50% {
-    background-position: 140%; }
+    background-position: 180%; }
   100% {
     background-position: 100%; } }
 
@@ -142,7 +145,7 @@
   0% {
     left: 40%; }
   50% {
-    left: 46%; }
+    left: 60%; }
   100% {
     left: 40%; } }
 
@@ -160,7 +163,6 @@
   animation-fill-mode: forwards;
   position: relative;
   overflow: hidden;
-  /*　はみ出た色要素を隠す　*/
   opacity: 0; }
 
 @keyframes bgextendAnimeBase {
@@ -169,7 +171,6 @@
   to {
     opacity: 1; } }
 
-/*中の要素*/
 .bgappear {
   animation-name: bgextendAnimeSecond;
   animation-duration: 0.5s;
@@ -183,7 +184,6 @@
   100% {
     opacity: 1; } }
 
-/*左から右*/
 .bgLRextend::before {
   animation-name: bgLRextendAnime;
   animation-duration: 0.5s;
@@ -212,7 +212,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #ca8080c9; }
+  background-color: #99339ac9; }
 
 @keyframes bgLRextendAnime {
   0% {
@@ -317,14 +317,28 @@ section {
     .logos {
       transform: scale(1); } }
   .logos__mask {
+    width: 132px;
+    height: 300px;
     transform-origin: 0 0;
-    transform: scale(0.464);
     position: absolute;
     background-color: #000000;
-    top: 0px; }
-    @media screen and (min-width: 576px) {
-      .logos__mask {
-        transform: scale(1); } }
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
+.loading {
+  color: #ffffff;
+  animation: ladingAnim 0.8s infinite ease-out; }
+
+@keyframes ladingAnim {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 
 .title {
   font-size: 46.4px;
@@ -346,7 +360,7 @@ section {
   .titlebg__illust {
     background-color: #ca8008c9; }
   .titlebg__music {
-    background-color: #ca8080c9; }
+    background-color: #99339ac9; }
 
 #topTitle {
   margin-bottom: 50px; }
@@ -376,7 +390,7 @@ section {
   .textContents__bg__illust {
     background-color: #ca8008c9; }
   .textContents__bg__music {
-    background-color: #ca8080c9; }
+    background-color: #99339ac9; }
   .textContents__text {
     font-family: "Shippori Antique B1", sans-serif;
     font-size: 19.488px;
@@ -414,91 +428,91 @@ section {
   align-items: center; }
 
 .js1 {
-  transform: rotate(-1deg);
-  margin-bottom: 17%; }
+  transform: rotate(-2deg);
+  margin-bottom: 11%; }
   @media screen and (min-width: 576px) {
     .js1 {
-      margin-left: 7%;
-      margin-bottom: 6%; } }
-
-.js2 {
-  transform: rotate(0deg);
-  margin-bottom: 18%; }
-  @media screen and (min-width: 576px) {
-    .js2 {
       margin-left: 8%;
       margin-bottom: 3%; } }
 
+.js2 {
+  transform: rotate(0deg);
+  margin-bottom: 17%; }
+  @media screen and (min-width: 576px) {
+    .js2 {
+      margin-left: 8%;
+      margin-bottom: 6%; } }
+
 .js3 {
-  transform: rotate(-3deg);
+  transform: rotate(-2deg);
   margin-bottom: 22%; }
   @media screen and (min-width: 576px) {
     .js3 {
-      margin-left: 2%;
-      margin-bottom: 3%; } }
+      margin-left: 6%;
+      margin-bottom: 5%; } }
 
 .js4 {
   transform: rotate(0deg);
-  margin-bottom: 19%; }
+  margin-bottom: 17%; }
   @media screen and (min-width: 576px) {
     .js4 {
       margin-left: 5%;
-      margin-bottom: 4%; } }
+      margin-bottom: 5%; } }
 
 .js5 {
   transform: rotate(-1deg);
-  margin-bottom: 20%; }
+  margin-bottom: 19%; }
   @media screen and (min-width: 576px) {
     .js5 {
-      margin-left: 1%;
-      margin-bottom: 4%; } }
+      margin-left: 7%;
+      margin-bottom: 3%; } }
 
 .js6 {
   transform: rotate(0deg);
-  margin-bottom: 18%; }
+  margin-bottom: 13%; }
   @media screen and (min-width: 576px) {
     .js6 {
-      margin-left: 7%;
-      margin-bottom: 4%; } }
+      margin-left: 6%;
+      margin-bottom: 3%; } }
 
 .js7 {
   transform: rotate(-2deg);
   margin-bottom: 20%; }
   @media screen and (min-width: 576px) {
     .js7 {
-      margin-left: 6%;
-      margin-bottom: 3%; } }
+      margin-left: 1%;
+      margin-bottom: 4%; } }
 
 .js8 {
   transform: rotate(0deg);
-  margin-bottom: 19%; }
+  margin-bottom: 16%; }
   @media screen and (min-width: 576px) {
     .js8 {
-      margin-left: 5%;
-      margin-bottom: 4%; } }
+      margin-left: 4%;
+      margin-bottom: 5%; } }
 
 .js9 {
   transform: rotate(-3deg);
   margin-bottom: 12%; }
   @media screen and (min-width: 576px) {
     .js9 {
-      margin-left: 7%;
+      margin-left: 6%;
       margin-bottom: 6%; } }
 
 .js10 {
   transform: rotate(0deg);
-  margin-bottom: 12%; }
+  margin-bottom: 20%; }
   @media screen and (min-width: 576px) {
     .js10 {
-      margin-left: 5%;
-      margin-bottom: 3%; } }
+      margin-left: 4%;
+      margin-bottom: 5%; } }
 
 .js11 {
-  transform: rotate(-1deg);
-  margin-bottom: 22%; }
+  transform: rotate(-2deg);
+  margin-bottom: 17%; }
   @media screen and (min-width: 576px) {
     .js11 {
-      margin-left: 5%;
+      margin-left: 7%;
       margin-bottom: 4%; } }
 
 .js12 {
@@ -506,6 +520,6 @@ section {
   margin-bottom: 20%; }
   @media screen and (min-width: 576px) {
     .js12 {
-      margin-left: 7%;
-      margin-bottom: 3%; } }
+      margin-left: 4%;
+      margin-bottom: 5%; } }
 
