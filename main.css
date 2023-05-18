@@ -4,7 +4,9 @@
 @charset "UTF-8";
 /*スクロールダウン全体の場所*/
 .scrolldown1 {
+  width: 100%;
   opacity: 0;
+  transform-origin: center;
   /*描画位置※位置は適宜調整してください*/
   position: fixed;
   z-index: 2;
@@ -17,7 +19,7 @@
 .scrolldown1 span {
   /*描画位置*/
   position: absolute;
-  left: -40px;
+  left: -90px;
   top: -30px;
   /*テキストの形状*/
   color: #000000;
@@ -86,6 +88,7 @@
       height: 100px; } }
 
 .linkButton {
+  border-bottom: solid 10px #000000;
   color: #333333;
   text-decoration: none;
   font-size: 12px;
@@ -110,7 +113,7 @@
     animation: btn-hover-anim 0.8s ease-in-out; }
   .linkButton:hover p::after {
     animation: btn-arr-hover-anim 0.8s ease-in-out;
-    top: 44%;
+    top: 40%;
     content: '';
     position: absolute;
     width: 8px;
@@ -129,7 +132,7 @@
   .linkButton p {
     margin-left: 5%; }
     .linkButton p::after {
-      top: 44%;
+      top: 40%;
       left: 40%;
       content: '';
       position: absolute;
@@ -154,6 +157,38 @@
     left: 60%; }
   100% {
     left: 40%; } }
+
+.snsShare__container {
+  position: fixed;
+  z-index: 5;
+  top: 150px;
+  left: 0px;
+  display: flex;
+  flex-flow: column;
+  gap: 0px; }
+  @media screen and (min-width: 576px) {
+    .snsShare__container {
+      top: 330px;
+      left: 30px;
+      gap: 10px; } }
+
+.snsShare__btn {
+  opacity: 0;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  transform: scale(0.7);
+  background-color: #000000;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media screen and (min-width: 576px) {
+    .snsShare__btn {
+      transform: scale(1);
+      width: 70px;
+      height: 70px; } }
 
 #backgroundEffect {
   width: 100vw;
@@ -186,6 +221,27 @@
 
 @keyframes bgextendAnimeSecond {
   0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.bgappear2 {
+  animation-name: bgextendAnimeSecond2;
+  animation-duration: 0.8s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  opacity: 0; }
+
+@keyframes bgextendAnimeSecond2 {
+  0% {
+    opacity: 0; }
+  52% {
+    opacity: 1; }
+  64% {
+    opacity: 0; }
+  74% {
+    opacity: 1; }
+  86% {
     opacity: 0; }
   100% {
     opacity: 1; } }
@@ -314,6 +370,59 @@
   /* 16:9の幅 → 9 ÷ 16 = 56.25% */
   min-height: 100%;
   min-width: 100%; }
+
+.thumbSlider__wrapper {
+  height: 200px;
+  overflow: hidden;
+  margin-top: 100px; }
+
+.thumbSlider__box {
+  opacity: 0;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  gap: 10px; }
+  @media screen and (min-width: 576px) {
+    .thumbSlider__box {
+      gap: 20px; } }
+  .thumbSlider__box div {
+    position: relative; }
+
+.thumbs__img {
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 200px;
+  height: 112px;
+  opacity: 0.6; }
+  @media screen and (min-width: 576px) {
+    .thumbs__img {
+      width: 300px;
+      height: 168px;
+      cursor: pointer; }
+      .thumbs__img:hover {
+        transform: scale(1.1, 1.1);
+        opacity: 1;
+        transition-duration: 0.5s; } }
+
+.thumbs__txt {
+  display: none;
+  font-family: "Shippori Antique B1", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  position: absolute;
+  top: 40%;
+  left: 30%; }
+  .thumbs__txt::after {
+    opacity: 0;
+    top: 10%;
+    left: 100%;
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-top: 4px solid #ffffff;
+    border-right: 4px solid #ffffff;
+    transform: rotate(45deg); }
 
 html {
   line-height: 1.0; }
@@ -451,7 +560,7 @@ section {
 
 .footer {
   width: 100vw;
-  height: 100px;
+  height: 200px;
   background-color: #000000;
   font-size: 10px;
   color: #ffffff;
@@ -461,96 +570,96 @@ section {
   align-items: center; }
 
 .js1 {
-  transform: rotate(-3deg);
-  margin-bottom: 18%; }
+  transform: rotate(-2deg);
+  margin-bottom: 11%; }
   @media screen and (min-width: 576px) {
     .js1 {
-      margin-left: 8%;
-      margin-bottom: 4%; } }
+      margin-left: 3%;
+      margin-bottom: 5%; } }
 
 .js2 {
   transform: rotate(0deg);
-  margin-bottom: 13%; }
+  margin-bottom: 18%; }
   @media screen and (min-width: 576px) {
     .js2 {
-      margin-left: 2%;
-      margin-bottom: 5%; } }
+      margin-left: 3%;
+      margin-bottom: 6%; } }
 
 .js3 {
-  transform: rotate(-3deg);
-  margin-bottom: 19%; }
+  transform: rotate(-1deg);
+  margin-bottom: 21%; }
   @media screen and (min-width: 576px) {
     .js3 {
-      margin-left: 2%;
+      margin-left: 8%;
       margin-bottom: 6%; } }
 
 .js4 {
   transform: rotate(0deg);
-  margin-bottom: 15%; }
+  margin-bottom: 14%; }
   @media screen and (min-width: 576px) {
     .js4 {
-      margin-left: 8%;
+      margin-left: 5%;
       margin-bottom: 4%; } }
 
 .js5 {
-  transform: rotate(-3deg);
-  margin-bottom: 13%; }
+  transform: rotate(-2deg);
+  margin-bottom: 15%; }
   @media screen and (min-width: 576px) {
     .js5 {
-      margin-left: 1%;
-      margin-bottom: 5%; } }
+      margin-left: 2%;
+      margin-bottom: 4%; } }
 
 .js6 {
   transform: rotate(0deg);
-  margin-bottom: 20%; }
-  @media screen and (min-width: 576px) {
-    .js6 {
-      margin-left: 6%;
-      margin-bottom: 6%; } }
-
-.js7 {
-  transform: rotate(-2deg);
   margin-bottom: 12%; }
   @media screen and (min-width: 576px) {
-    .js7 {
-      margin-left: 1%;
-      margin-bottom: 5%; } }
-
-.js8 {
-  transform: rotate(0deg);
-  margin-bottom: 21%; }
-  @media screen and (min-width: 576px) {
-    .js8 {
-      margin-left: 1%;
-      margin-bottom: 4%; } }
-
-.js9 {
-  transform: rotate(-1deg);
-  margin-bottom: 19%; }
-  @media screen and (min-width: 576px) {
-    .js9 {
+    .js6 {
       margin-left: 8%;
       margin-bottom: 3%; } }
 
-.js10 {
-  transform: rotate(0deg);
-  margin-bottom: 20%; }
+.js7 {
+  transform: rotate(-1deg);
+  margin-bottom: 16%; }
   @media screen and (min-width: 576px) {
-    .js10 {
+    .js7 {
+      margin-left: 4%;
+      margin-bottom: 3%; } }
+
+.js8 {
+  transform: rotate(0deg);
+  margin-bottom: 19%; }
+  @media screen and (min-width: 576px) {
+    .js8 {
+      margin-left: 1%;
+      margin-bottom: 5%; } }
+
+.js9 {
+  transform: rotate(-3deg);
+  margin-bottom: 17%; }
+  @media screen and (min-width: 576px) {
+    .js9 {
       margin-left: 3%;
       margin-bottom: 4%; } }
 
+.js10 {
+  transform: rotate(0deg);
+  margin-bottom: 14%; }
+  @media screen and (min-width: 576px) {
+    .js10 {
+      margin-left: 7%;
+      margin-bottom: 3%; } }
+
 .js11 {
-  transform: rotate(-3deg);
-  margin-bottom: 22%; }
+  transform: rotate(-2deg);
+  margin-bottom: 19%; }
   @media screen and (min-width: 576px) {
     .js11 {
-      margin-left: 2%;
-      margin-bottom: 6%; } }
+      margin-left: 8%;
+      margin-bottom: 4%; } }
 
 .js12 {
   transform: rotate(0deg);
-  margin-bottom: 18%; }
+  margin-bottom: 11%; }
   @media screen and (min-width: 576px) {
     .js12 {
       margin-left: 4%;
@@ -558,39 +667,9 @@ section {
 
 .js13 {
   transform: rotate(-1deg);
-  margin-bottom: 17%; }
+  margin-bottom: 18%; }
   @media screen and (min-width: 576px) {
     .js13 {
-      margin-left: 1%;
-      margin-bottom: 3%; } }
-
-.thumbSlider__wrapper {
-  height: 200px;
-  overflow: hidden;
-  margin-top: 100px; }
-
-.thumbSlider__box {
-  height: 200px;
-  display: flex;
-  align-items: center;
-  gap: 10px; }
-  @media screen and (min-width: 576px) {
-    .thumbSlider__box {
-      gap: 20px; } }
-
-.thumbs__img {
-  box-sizing: border-box;
-  border-radius: 8px;
-  width: 200px;
-  height: 112px;
-  opacity: 0.6; }
-  @media screen and (min-width: 576px) {
-    .thumbs__img {
-      width: 300px;
-      height: 168px;
-      cursor: pointer; }
-      .thumbs__img:hover {
-        transform: scale(1.1, 1.1);
-        opacity: 1;
-        transition-duration: 0.5s; } }
+      margin-left: 4%;
+      margin-bottom: 6%; } }
 
