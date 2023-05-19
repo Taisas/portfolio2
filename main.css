@@ -388,24 +388,31 @@
   .thumbSlider__box div {
     position: relative; }
 
+.thumbs__content {
+  opacity: 0.6; }
+  @media screen and (min-width: 576px) {
+    .thumbs__content {
+      cursor: pointer; }
+      .thumbs__content:hover {
+        transform: scale(1.1, 1.1);
+        opacity: 1;
+        transition-duration: 0.5s; }
+      .thumbs__content:hover .thumbs__txt {
+        opacity: 1; } }
+
 .thumbs__img {
   box-sizing: border-box;
   border-radius: 8px;
   width: 200px;
-  height: 112px;
-  opacity: 0.6; }
+  height: 112px; }
   @media screen and (min-width: 576px) {
     .thumbs__img {
       width: 300px;
-      height: 168px;
-      cursor: pointer; }
-      .thumbs__img:hover {
-        transform: scale(1.1, 1.1);
-        opacity: 1;
-        transition-duration: 0.5s; } }
+      height: 168px; } }
 
 .thumbs__txt {
-  display: none;
+  opacity: 0;
+  background-color: #000000cc;
   font-family: "Shippori Antique B1", sans-serif;
   font-size: 14px;
   color: #ffffff;
@@ -413,15 +420,14 @@
   top: 40%;
   left: 30%; }
   .thumbs__txt::after {
-    opacity: 0;
     top: 10%;
     left: 100%;
     content: '';
     position: absolute;
     width: 8px;
     height: 8px;
-    border-top: 4px solid #ffffff;
-    border-right: 4px solid #ffffff;
+    border-top: 4px solid #000000;
+    border-right: 4px solid #000000;
     transform: rotate(45deg); }
 
 html {
@@ -437,6 +443,7 @@ section {
   position: relative; }
 
 .logos {
+  visibility: hidden;
   width: 132px;
   height: 300px;
   transform-origin: 0 0;
@@ -570,106 +577,106 @@ section {
   align-items: center; }
 
 .js1 {
-  transform: rotate(-2deg);
-  margin-bottom: 11%; }
+  transform: rotate(-3deg);
+  margin-bottom: 19%; }
   @media screen and (min-width: 576px) {
     .js1 {
-      margin-left: 3%;
-      margin-bottom: 5%; } }
+      margin-left: 1%;
+      margin-bottom: 6%; } }
 
 .js2 {
   transform: rotate(0deg);
-  margin-bottom: 18%; }
+  margin-bottom: 17%; }
   @media screen and (min-width: 576px) {
     .js2 {
-      margin-left: 3%;
-      margin-bottom: 6%; } }
+      margin-left: 1%;
+      margin-bottom: 5%; } }
 
 .js3 {
   transform: rotate(-1deg);
-  margin-bottom: 21%; }
+  margin-bottom: 22%; }
   @media screen and (min-width: 576px) {
     .js3 {
-      margin-left: 8%;
-      margin-bottom: 6%; } }
+      margin-left: 3%;
+      margin-bottom: 3%; } }
 
 .js4 {
   transform: rotate(0deg);
-  margin-bottom: 14%; }
+  margin-bottom: 21%; }
   @media screen and (min-width: 576px) {
     .js4 {
-      margin-left: 5%;
+      margin-left: 8%;
       margin-bottom: 4%; } }
 
 .js5 {
   transform: rotate(-2deg);
-  margin-bottom: 15%; }
+  margin-bottom: 18%; }
   @media screen and (min-width: 576px) {
     .js5 {
-      margin-left: 2%;
+      margin-left: 7%;
       margin-bottom: 4%; } }
 
 .js6 {
   transform: rotate(0deg);
-  margin-bottom: 12%; }
+  margin-bottom: 11%; }
   @media screen and (min-width: 576px) {
     .js6 {
-      margin-left: 8%;
+      margin-left: 2%;
       margin-bottom: 3%; } }
 
 .js7 {
-  transform: rotate(-1deg);
+  transform: rotate(-2deg);
   margin-bottom: 16%; }
   @media screen and (min-width: 576px) {
     .js7 {
-      margin-left: 4%;
+      margin-left: 8%;
       margin-bottom: 3%; } }
 
 .js8 {
   transform: rotate(0deg);
-  margin-bottom: 19%; }
+  margin-bottom: 18%; }
   @media screen and (min-width: 576px) {
     .js8 {
-      margin-left: 1%;
-      margin-bottom: 5%; } }
+      margin-left: 3%;
+      margin-bottom: 3%; } }
 
 .js9 {
   transform: rotate(-3deg);
-  margin-bottom: 17%; }
+  margin-bottom: 16%; }
   @media screen and (min-width: 576px) {
     .js9 {
-      margin-left: 3%;
-      margin-bottom: 4%; } }
+      margin-left: 8%;
+      margin-bottom: 6%; } }
 
 .js10 {
   transform: rotate(0deg);
-  margin-bottom: 14%; }
+  margin-bottom: 19%; }
   @media screen and (min-width: 576px) {
     .js10 {
-      margin-left: 7%;
+      margin-left: 6%;
       margin-bottom: 3%; } }
 
 .js11 {
-  transform: rotate(-2deg);
-  margin-bottom: 19%; }
-  @media screen and (min-width: 576px) {
-    .js11 {
-      margin-left: 8%;
-      margin-bottom: 4%; } }
-
-.js12 {
-  transform: rotate(0deg);
-  margin-bottom: 11%; }
-  @media screen and (min-width: 576px) {
-    .js12 {
-      margin-left: 4%;
-      margin-bottom: 5%; } }
-
-.js13 {
   transform: rotate(-1deg);
   margin-bottom: 18%; }
   @media screen and (min-width: 576px) {
+    .js11 {
+      margin-left: 7%;
+      margin-bottom: 3%; } }
+
+.js12 {
+  transform: rotate(0deg);
+  margin-bottom: 14%; }
+  @media screen and (min-width: 576px) {
+    .js12 {
+      margin-left: 7%;
+      margin-bottom: 4%; } }
+
+.js13 {
+  transform: rotate(-3deg);
+  margin-bottom: 19%; }
+  @media screen and (min-width: 576px) {
     .js13 {
-      margin-left: 4%;
-      margin-bottom: 6%; } }
+      margin-left: 6%;
+      margin-bottom: 4%; } }
 
