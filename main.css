@@ -21,6 +21,7 @@
   position: absolute;
   left: -90px;
   top: -30px;
+  border-bottom: 4px solid #ffffff;
   /*テキストの形状*/
   color: #000000;
   font-size: 1.5rem;
@@ -110,9 +111,11 @@
       width: 300px;
       height: 100px; } }
   .linkButton:hover {
-    animation: btn-hover-anim 0.8s ease-in-out; }
+    animation: btn-hover-anim 0.4s ease-in;
+    animation-fill-mode: forwards; }
   .linkButton:hover p::after {
-    animation: btn-arr-hover-anim 0.8s ease-in-out;
+    animation: btn-arr-hover-anim 0.5s ease-in;
+    animation-fill-mode: forwards;
     top: 40%;
     content: '';
     position: absolute;
@@ -145,18 +148,14 @@
 @keyframes btn-hover-anim {
   0% {
     background-position: 100%; }
-  50% {
-    background-position: 180%; }
   100% {
-    background-position: 100%; } }
+    background-position: 150%; } }
 
 @keyframes btn-arr-hover-anim {
   0% {
     left: 40%; }
-  50% {
-    left: 60%; }
   100% {
-    left: 40%; } }
+    left: 60%; } }
 
 .snsShare__container {
   position: fixed;
@@ -173,6 +172,7 @@
       gap: 10px; } }
 
 .snsShare__btn {
+  overflow: hidden;
   opacity: 0;
   cursor: pointer;
   width: 70px;
@@ -188,7 +188,10 @@
     .snsShare__btn {
       transform: scale(1);
       width: 70px;
-      height: 70px; } }
+      height: 70px; }
+      .snsShare__btn:hover .snsShare__btn__icon {
+        transform: scale(1.8, 1.8);
+        transition-duration: 0.4s; } }
 
 #backgroundEffect {
   width: 100vw;
@@ -414,7 +417,7 @@
   opacity: 0;
   background-color: #000000cc;
   font-family: "Shippori Antique B1", sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   color: #ffffff;
   position: absolute;
   top: 40%;
@@ -578,39 +581,39 @@ section {
 
 .js1 {
   transform: rotate(-3deg);
-  margin-bottom: 19%; }
+  margin-bottom: 13%; }
   @media screen and (min-width: 576px) {
     .js1 {
-      margin-left: 1%;
-      margin-bottom: 6%; } }
-
-.js2 {
-  transform: rotate(0deg);
-  margin-bottom: 17%; }
-  @media screen and (min-width: 576px) {
-    .js2 {
-      margin-left: 1%;
-      margin-bottom: 5%; } }
-
-.js3 {
-  transform: rotate(-1deg);
-  margin-bottom: 22%; }
-  @media screen and (min-width: 576px) {
-    .js3 {
-      margin-left: 3%;
-      margin-bottom: 3%; } }
-
-.js4 {
-  transform: rotate(0deg);
-  margin-bottom: 21%; }
-  @media screen and (min-width: 576px) {
-    .js4 {
       margin-left: 8%;
       margin-bottom: 4%; } }
 
+.js2 {
+  transform: rotate(0deg);
+  margin-bottom: 22%; }
+  @media screen and (min-width: 576px) {
+    .js2 {
+      margin-left: 5%;
+      margin-bottom: 5%; } }
+
+.js3 {
+  transform: rotate(-3deg);
+  margin-bottom: 15%; }
+  @media screen and (min-width: 576px) {
+    .js3 {
+      margin-left: 7%;
+      margin-bottom: 6%; } }
+
+.js4 {
+  transform: rotate(0deg);
+  margin-bottom: 18%; }
+  @media screen and (min-width: 576px) {
+    .js4 {
+      margin-left: 8%;
+      margin-bottom: 5%; } }
+
 .js5 {
   transform: rotate(-2deg);
-  margin-bottom: 18%; }
+  margin-bottom: 11%; }
   @media screen and (min-width: 576px) {
     .js5 {
       margin-left: 7%;
@@ -618,58 +621,58 @@ section {
 
 .js6 {
   transform: rotate(0deg);
-  margin-bottom: 11%; }
+  margin-bottom: 20%; }
   @media screen and (min-width: 576px) {
     .js6 {
-      margin-left: 2%;
-      margin-bottom: 3%; } }
+      margin-left: 1%;
+      margin-bottom: 6%; } }
 
 .js7 {
   transform: rotate(-2deg);
-  margin-bottom: 16%; }
+  margin-bottom: 21%; }
   @media screen and (min-width: 576px) {
     .js7 {
-      margin-left: 8%;
-      margin-bottom: 3%; } }
+      margin-left: 2%;
+      margin-bottom: 5%; } }
 
 .js8 {
   transform: rotate(0deg);
-  margin-bottom: 18%; }
+  margin-bottom: 19%; }
   @media screen and (min-width: 576px) {
     .js8 {
       margin-left: 3%;
-      margin-bottom: 3%; } }
+      margin-bottom: 5%; } }
 
 .js9 {
   transform: rotate(-3deg);
-  margin-bottom: 16%; }
+  margin-bottom: 19%; }
   @media screen and (min-width: 576px) {
     .js9 {
-      margin-left: 8%;
-      margin-bottom: 6%; } }
+      margin-left: 7%;
+      margin-bottom: 4%; } }
 
 .js10 {
   transform: rotate(0deg);
-  margin-bottom: 19%; }
+  margin-bottom: 16%; }
   @media screen and (min-width: 576px) {
     .js10 {
-      margin-left: 6%;
-      margin-bottom: 3%; } }
+      margin-left: 7%;
+      margin-bottom: 4%; } }
 
 .js11 {
   transform: rotate(-1deg);
-  margin-bottom: 18%; }
+  margin-bottom: 11%; }
   @media screen and (min-width: 576px) {
     .js11 {
-      margin-left: 7%;
-      margin-bottom: 3%; } }
+      margin-left: 5%;
+      margin-bottom: 6%; } }
 
 .js12 {
   transform: rotate(0deg);
-  margin-bottom: 14%; }
+  margin-bottom: 12%; }
   @media screen and (min-width: 576px) {
     .js12 {
-      margin-left: 7%;
+      margin-left: 3%;
       margin-bottom: 4%; } }
 
 .js13 {
@@ -677,6 +680,6 @@ section {
   margin-bottom: 19%; }
   @media screen and (min-width: 576px) {
     .js13 {
-      margin-left: 6%;
-      margin-bottom: 4%; } }
+      margin-left: 4%;
+      margin-bottom: 3%; } }
 
