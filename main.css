@@ -267,7 +267,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #02728dcc; }
+  background-color: #024353cc; }
 
 .bgIllustLRextend::before {
   animation-name: bgLRextendAnime;
@@ -277,7 +277,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #ca8008c9; }
+  background-color: rgba(96, 95, 14, 0.87); }
 
 .bgMusicLRextend::before {
   animation-name: bgLRextendAnime;
@@ -287,7 +287,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #99339ac9; }
+  background-color: #500151c4; }
 
 .bgMovieLRextend::before {
   animation-name: bgLRextendAnime;
@@ -297,7 +297,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(161, 60, 10, 0.79); }
+  background-color: #4d1c04e0; }
 
 @keyframes bgLRextendAnime {
   0% {
@@ -463,7 +463,29 @@
 
 .audio__player {
   width: 150px;
-  margin-right: 20px; }
+  margin-right: 20px;
+  opacity: 0; }
+  .audio__player__show {
+    animation-name: audio-anim;
+    animation-duration: 0.8s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards; }
+
+@keyframes audio-anim {
+  0% {
+    opacity: 0;
+    transform: scale(2); }
+  52% {
+    opacity: 1;
+    transform: scale(1); }
+  64% {
+    opacity: 0; }
+  74% {
+    opacity: 1; }
+  86% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 html {
   line-height: 1.0; }
@@ -528,13 +550,13 @@ section {
     .titlebg {
       width: 60px; } }
   .titlebg__about {
-    background-color: #02728dcc; }
+    background-color: #024353cc; }
   .titlebg__illust {
-    background-color: #ca8008c9; }
+    background-color: rgba(96, 95, 14, 0.87); }
   .titlebg__music {
-    background-color: #99339ac9; }
+    background-color: #500151c4; }
   .titlebg__movie {
-    background-color: rgba(161, 60, 10, 0.79); }
+    background-color: #4d1c04e0; }
 
 #topTitle {
   margin-bottom: 50px; }
@@ -563,13 +585,13 @@ section {
   transform-origin: left;
   margin-bottom: 40px; }
   .textContents__bg__about {
-    background-color: #02728dcc; }
+    background-color: #024353cc; }
   .textContents__bg__illust {
-    background-color: #ca8008c9; }
+    background-color: rgba(96, 95, 14, 0.87); }
   .textContents__bg__music {
-    background-color: #99339ac9; }
+    background-color: #500151c4; }
   .textContents__bg__movie {
-    background-color: rgba(161, 60, 10, 0.79); }
+    background-color: #4d1c04e0; }
   .textContents__text {
     font-family: "Shippori Antique B1", sans-serif;
     font-size: 19.488px;
@@ -612,43 +634,43 @@ section {
   align-items: center; }
 
 .js1 {
-  transform: rotate(-1deg);
-  margin-bottom: 18%; }
+  transform: rotate(-2deg);
+  margin-bottom: 11%; }
   @media screen and (min-width: 576px) {
     .js1 {
-      margin-left: 8%;
+      margin-left: 7%;
       margin-bottom: 3%; } }
 
 .js2 {
   transform: rotate(0deg);
-  margin-bottom: 12%; }
+  margin-bottom: 11%; }
   @media screen and (min-width: 576px) {
     .js2 {
-      margin-left: 1%;
+      margin-left: 2%;
       margin-bottom: 3%; } }
 
 .js3 {
   transform: rotate(-3deg);
-  margin-bottom: 20%; }
+  margin-bottom: 13%; }
   @media screen and (min-width: 576px) {
     .js3 {
-      margin-left: 5%;
-      margin-bottom: 5%; } }
+      margin-left: 3%;
+      margin-bottom: 6%; } }
 
 .js4 {
   transform: rotate(0deg);
-  margin-bottom: 21%; }
+  margin-bottom: 16%; }
   @media screen and (min-width: 576px) {
     .js4 {
-      margin-left: 6%;
-      margin-bottom: 4%; } }
+      margin-left: 3%;
+      margin-bottom: 6%; } }
 
 .js5 {
   transform: rotate(-1deg);
-  margin-bottom: 21%; }
+  margin-bottom: 15%; }
   @media screen and (min-width: 576px) {
     .js5 {
-      margin-left: 3%;
+      margin-left: 1%;
       margin-bottom: 4%; } }
 
 .js6 {
@@ -657,61 +679,61 @@ section {
   @media screen and (min-width: 576px) {
     .js6 {
       margin-left: 3%;
-      margin-bottom: 4%; } }
+      margin-bottom: 5%; } }
 
 .js7 {
-  transform: rotate(-3deg);
-  margin-bottom: 11%; }
+  transform: rotate(-1deg);
+  margin-bottom: 16%; }
   @media screen and (min-width: 576px) {
     .js7 {
-      margin-left: 5%;
-      margin-bottom: 6%; } }
+      margin-left: 3%;
+      margin-bottom: 3%; } }
 
 .js8 {
   transform: rotate(0deg);
-  margin-bottom: 18%; }
+  margin-bottom: 11%; }
   @media screen and (min-width: 576px) {
     .js8 {
-      margin-left: 5%;
-      margin-bottom: 4%; } }
+      margin-left: 3%;
+      margin-bottom: 6%; } }
 
 .js9 {
   transform: rotate(-2deg);
   margin-bottom: 11%; }
   @media screen and (min-width: 576px) {
     .js9 {
-      margin-left: 6%;
-      margin-bottom: 3%; } }
+      margin-left: 1%;
+      margin-bottom: 4%; } }
 
 .js10 {
   transform: rotate(0deg);
-  margin-bottom: 22%; }
+  margin-bottom: 21%; }
   @media screen and (min-width: 576px) {
     .js10 {
-      margin-left: 7%;
-      margin-bottom: 3%; } }
+      margin-left: 4%;
+      margin-bottom: 5%; } }
 
 .js11 {
-  transform: rotate(-2deg);
-  margin-bottom: 20%; }
+  transform: rotate(-3deg);
+  margin-bottom: 21%; }
   @media screen and (min-width: 576px) {
     .js11 {
-      margin-left: 3%;
-      margin-bottom: 3%; } }
+      margin-left: 4%;
+      margin-bottom: 5%; } }
 
 .js12 {
   transform: rotate(0deg);
-  margin-bottom: 11%; }
+  margin-bottom: 12%; }
   @media screen and (min-width: 576px) {
     .js12 {
-      margin-left: 7%;
+      margin-left: 5%;
       margin-bottom: 3%; } }
 
 .js13 {
   transform: rotate(-3deg);
-  margin-bottom: 13%; }
+  margin-bottom: 18%; }
   @media screen and (min-width: 576px) {
     .js13 {
-      margin-left: 3%;
-      margin-bottom: 6%; } }
+      margin-left: 1%;
+      margin-bottom: 5%; } }
 
