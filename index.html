@@ -74,7 +74,7 @@
 
 
             <div class="background-video-area">
-                <video class="background-video" poster="assets/images/about_background_1_poster.jpg" webkit-playsinline playsinline muted autoplay loop>
+                <video id="videoPlayer0" class="background-video" poster="assets/images/about_background_5_poster.jpg" webkit-playsinline playsinline muted autoplay loop>
 
                     <source src="assets/movies/about_background_6.mp4" type="video/mp4">
                     <!--            <source src="assets/movies/about_background_1.ogv" type="video/ogv">-->
@@ -128,7 +128,13 @@
 
 
     <section class="music">
+
         <div class="musicContents__container">
+
+            <div class="audio__contents">
+                <audio src="assets/music/bgm.mp3" id="audio" loop controls class="audio__player"></audio>
+            </div>
+
             <div class="contents">
 
                 <div id="musicTitle" class="title"><span class="bgextend bgLRextendTrigger4"><span class="bgappearTrigger4"><span class="titlebg titlebg__music">M</span>usic</span></span></div>
@@ -206,7 +212,7 @@
 <!--            </div>-->
 
             <div class="background-video-area">
-                <video class="background-video" poster="" webkit-playsinline playsinline muted autoplay loop id="videoPlayer1">
+                <video class="background-video" poster="" webkit-playsinline playsinline muted loop id="videoPlayer1">
 
                     <source src="assets/movies/t_default.mp4" type="video/mp4">
                     <!--            <source src="assets/movies/about_background_1.ogv" type="video/ogv">-->
