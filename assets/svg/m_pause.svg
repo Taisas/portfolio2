@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f50;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <circle id="楕円形_1" data-name="楕円形 1" class="cls-1" cx="30" cy="30" r="30"/>
+  <rect id="長方形_1" data-name="長方形 1" class="cls-2" x="19" y="15" width="10" height="30"/>
+  <rect id="長方形_1_のコピー" data-name="長方形 1 のコピー" class="cls-2" x="33" y="15" width="10" height="30"/>
+</svg>

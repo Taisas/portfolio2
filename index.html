@@ -2,8 +2,14 @@
 <html lang="ja">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Tais Official</title>
+    <meta name="viewport" content="width=device-width" initial-scale=1.0" />
+    <meta property="og:url" content="https://taisas.github.io/portfolio2/" />
+    <meta property="og:title" content="tais Portforio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="tais Portforio page" />
+    <meta property="og:site_name" content="tais Portforio" />
+    <meta property="og:image" content="https://taisas.github.io/portfolio2/assets/images/ogimage.jpg" />
+    <title>tais Portforio</title>
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -131,8 +137,14 @@
 
         <div class="musicContents__container">
 
-            <div class="audio__contents">
-                <audio src="assets/music/bgm.mp3" id="audio" loop controls class="audio__player"></audio>
+            <div class="audio_player__container">
+                <audio src="assets/music/bgm.mp3" loop id="audio__player"></audio>
+                <div class="audio_player">
+                    <div class="audio_player__controller">
+                        <div class="audio_player__btn"><img src="assets/svg/m_play.svg" alt="" class="audio_player__btn__img"></div>
+                        <div>音楽を再生</div>
+                    </div>
+                </div>
             </div>
 
             <div class="contents">

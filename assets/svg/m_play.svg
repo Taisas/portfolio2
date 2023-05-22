@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f50;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="楕円形_1" data-name="楕円形 1" class="cls-1" cx="30" cy="30" r="30"/>
+  <path id="多角形_1" data-name="多角形 1" class="cls-2" d="M43.689,29.889L23.952,44.718V15.06Z"/>
+</svg>
